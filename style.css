@@ -1,0 +1,282 @@
+
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */body .contenedorTitulo{
+  color: #999;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse .92s infinite;
+  -moz-animation: bg-scrolling-reverse .92s infinite;
+  -o-animation: bg-scrolling-reverse .92s infinite;
+  animation: bg-scrolling-reverse .92s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+
+  h1{
+    font-size: 52px;
+    font-weight: 800;
+  }
+}
+
+body .contenedorTitulo::before {
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .encabezado {
+    .contenedorNav {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 15px;
+      position: static;
+
+      .logo {
+        font-size: 20px;
+      }
+
+      .navegacion {
+        flex-direction: column;
+        gap: 8px;
+
+        a {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .contenedorTitulo {
+      height: 300px;
+      text-align: center;
+
+      h1 {
+        font-size: 28px;
+      }
+    }
+  }
+
+  .contenedorProductos {
+    height: auto;
+    padding: 30px 10px;
+
+    .tituloProductos {
+      font-size: 24px;
+      margin: 40px 0 20px 0;
+    }
+
+    .contenedorTarjetas {
+      flex-direction: column;
+      align-items: center;
+
+      .tarjeta {
+        width: 90%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .contenedorServicios {
+    height: auto;
+    padding: 30px 10px;
+
+    .contenedorTarjetasServicios {
+      .tarjetaServicio {
+        width: 100%;
+      }
+    }
+  }
+
+  .contenedorAcercaDe {
+    height: auto;
+
+    .subContendorAcercaDe {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+
+    .valores {
+      grid-column: auto;
+    }
+  }
+
+  .contenedorContacto {
+    width: 95%;
+    padding: 20px;
+  }
+}
+
+
+@media (max-width: 450px) {
+  body {
+    font-size: 14px;
+  }
+
+  .encabezado {
+    .contenedorNav {
+      padding: 10px;
+      gap: 5px;
+
+      .logo {
+        font-size: 18px;
+      }
+
+      .navegacion {
+        gap: 10px;
+
+        a {
+          display: block;
+          width: 100%;
+          text-align: center;
+          padding: 8px;
+          background-color: #2F4F4F;
+          border-radius: 4px;
+
+          &:hover {
+            background-color: #444;
+          }
+        }
+      }
+    }
+
+    .contenedorTitulo {
+      height: 200px;
+
+      h1 {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .contenedorProductos {
+    padding: 0px 0px;
+
+    .tituloProductos {
+      font-size: 20px;
+    }
+
+    .contenedorTarjetas {
+      gap: 8px;
+
+      .tarjeta {
+        width: 100%;
+        margin: 0;
+        padding: 0px;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+        p {
+          font-size: 13px;
+        }
+
+        .btn {
+          width: 95%;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .contenedorServicios {
+    padding: 0 0;
+    background-color: #e7cccc;
+    .tituloServicios {
+      font-size: 20px;
+    }
+
+    .contenedorTarjetasServicios {
+      .tarjetaServicio {
+        padding: 5px;
+      }
+    }
+  }
+
+  .contenedorAcercaDe {
+    padding: 10px;
+
+    .tituloAcercaDe {
+      font-size: 20px;
+    }
+
+    .subContendorAcercaDe {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  .contenedorContacto {
+    padding: 15px;
+    width: 100%;
+
+    .contenedorFormularioContacto {
+      padding: 10px;
+
+      .formulario {
+        gap: 8px;
+
+        .contenedorBotones {
+          padding-top: 20px;
+
+          .btn {
+            width: 100%;
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    font-size: 13px;
+    padding: 15px;
+  }
+}
